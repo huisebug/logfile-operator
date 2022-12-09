@@ -1,0 +1,27 @@
+# permissions for end users to view logfiles.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: logfile-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: logfile-operator
+    app.kubernetes.io/part-of: logfile-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: logfile-viewer-role
+rules:
+- apiGroups:
+  - api.huisebug.org
+  resources:
+  - logfiles
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - api.huisebug.org
+  resources:
+  - logfiles/status
+  verbs:
+  - get

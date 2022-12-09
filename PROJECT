@@ -1,0 +1,27 @@
+domain: huisebug.org
+layout:
+- go.kubebuilder.io/v3
+projectName: logfile-operator
+repo: github.com/huisebug/logfile-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: huisebug.org
+  group: api
+  kind: LogFile
+  path: github.com/huisebug/logfile-operator/api/v1
+  version: v1
+  webhooks:
+    defaulting: true
+    validation: true
+    webhookVersion: v1
+- group: core
+  kind: Pod
+  path: k8s.io/api/core/v1
+  version: v1
+  webhooks:
+    defaulting: true
+    webhookVersion: v1
+version: "3"

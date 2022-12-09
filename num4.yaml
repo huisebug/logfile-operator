@@ -1,0 +1,11 @@
+apiVersion: api.huisebug.org/v1
+kind: LogFile
+metadata:
+  name: flec
+  namespace: logfile-operator-system
+spec:
+  programmenum: 4
+  elastic_password: "es8123456"
+  kibana_password: "es8123456"
+  storageClassName: "nfs-storageclass"
+

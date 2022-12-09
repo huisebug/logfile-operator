@@ -1,0 +1,12 @@
+apiVersion: api.huisebug.org/v1
+kind: LogFile
+metadata:
+  labels:
+    app.kubernetes.io/name: logfile
+    app.kubernetes.io/instance: logfile-sample
+    app.kubernetes.io/part-of: logfile-operator
+    app.kuberentes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: logfile-operator
+  name: logfile-sample
+spec:
+  # TODO(user): Add fields here

@@ -1,0 +1,31 @@
+# permissions for end users to edit logfiles.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: logfile-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: logfile-operator
+    app.kubernetes.io/part-of: logfile-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: logfile-editor-role
+rules:
+- apiGroups:
+  - api.huisebug.org
+  resources:
+  - logfiles
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - api.huisebug.org
+  resources:
+  - logfiles/status
+  verbs:
+  - get
