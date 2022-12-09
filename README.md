@@ -12,7 +12,7 @@ You’ll need a Kubernetes cluster to run against. You can use [KIND](https://si
 1. Install Instances of Custom Resources:
 
 ```sh
-kubectl apply -f config/samples/
+kubectl apply -f deploy.yaml
 ```
 
 2. Build and push your image to the location specified by `IMG`:
@@ -57,11 +57,6 @@ which provides a reconcile function responsible for synchronizing resources unti
 make install
 ```
 
-2. Run your controller (this will run in the foreground, so switch to a new terminal if you want to leave it running):
-
-```sh
-make run
-```
 
 **NOTE:** You can also run this in one step by running: `make install run`
 
