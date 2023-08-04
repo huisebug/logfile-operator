@@ -527,7 +527,7 @@ spec:
         - --leader-elect
         command:
         - /manager
-        image: hub.antiy.cn/wyf/logfile-operator:v202211211341
+        image: logfile-operator
         livenessProbe:
           httpGet:
             path: /healthz
