@@ -527,7 +527,7 @@ spec:
         - --leader-elect
         command:
         - /manager
-        image: logfile-operator
+        image: registry.cn-hangzhou.aliyuncs.com/huisebug/logfile-operator:manager
         livenessProbe:
           httpGet:
             path: /healthz
